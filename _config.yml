@@ -13,7 +13,8 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+root: /myblog/
+url: https://zk923852367.github.io/myblog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -99,8 +100,14 @@ ignore:
 ## Themes: https://hexo.io/themes/
 # theme: landscape
 theme: kaze
+theme_config:
+  logo_img: /myblog/img/Kaze.png # put the logo on the ${blog_path}/source/img/${picname}.png or use urls
+  author_img: /myblog/img/Kaze.png
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/zk923852367/myblog.git
+  branch: gh-pages
+  message: "Site updated :)"
